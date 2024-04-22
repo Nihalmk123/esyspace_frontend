@@ -1,0 +1,33 @@
+.cascading-right {
+    margin-right: -50px;
+  }
+  
+  @media (max-width: 900px) {
+    .cascading-right {
+      margin-right: 0;
+    }
+  }
+  
+  .text_font{
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 55px;
+      color: #11235A;
+  }
+  
+  .background_color{
+    background-color: #C9D7DD;
+  }
+  .reg_buttons{
+    background-color: #11235A;
+    color: white;
+    padding:6px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+  .login-img{
+    background: url("../assets/esyspace_img.png");
+    background-position: center;
+    background-size: cover;
+  }
