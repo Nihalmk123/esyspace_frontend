@@ -5,9 +5,9 @@ import Home from "./Pages/Home";
 import Pricing from "./Pages/Pricing";
 import Signin from "./Pages/Registration/Signin";
 import Signup from "./Pages/Registration/Signup";
-import Blog from "./Pages/Blog";
 import Dasboard from "./Pages/Dasboard";
 import ForgotPassword from "./Pages/ForgotPassword";
+import Blog from "./Pages/Blog/Blog";
 
 function App() {
   return (

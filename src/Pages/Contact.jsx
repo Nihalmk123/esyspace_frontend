@@ -4,61 +4,73 @@ import '../Styles/ContactStyle.css'
 export default function Contact() {
   return (
     <Layout>
-      <div className='p-5'>
-      <section id="contact" className="contact">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <h2 className='text-center'>Contact</h2>
-            <p className='text-center'>Contact Us</p>
+      <div className="contact_us_2">
+        <div className="responsive-container-block big-container">
+          <div className="blueBG">
           </div>
-          <div className="row">
-            <div className="col-lg-4" data-aos="fade-right" data-aos-delay={100}>
-              <div className="info">
-                <div className="address">
-                  <i className="bi bi-geo-alt" />
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+          <div className="responsive-container-block container">
+            <form className="form-box">
+              <div className="container-block form-wrapper">
+                <h3 className="text-blk contactus-head">
+                  Get in Touch
+                </h3>
+                <p className="text-blk contactus-subhead">
+                </p>
+                <div className="responsive-container-block">
+                  <div className="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt">
+                    <p className="text-blk input-title">
+                      FIRST NAME
+                    </p>
+                    <input className="input" id="ijowk" name="FirstName" placeholder="Please enter first name..." />
+                  </div>
+                  <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                    <p className="text-blk input-title">
+                      LAST NAME
+                    </p>
+                    <input className="input" id="indfi" name="Last Name" placeholder="Please enter last name..." />
+                  </div>
+                  <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                    <p className="text-blk input-title">
+                      EMAIL
+                    </p>
+                    <input className="input" id="ipmgh" name="Email" placeholder="Please enter email..." />
+                  </div>
+                  <div className="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                    <p className="text-blk input-title">
+                      PHONE NUMBER
+                    </p>
+                    <input className="input" id="imgis" name="PhoneNumber" placeholder="Please enter phone number..." />
+                  </div>
+                  <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
+                    <p className="text-blk input-title">
+                      WHAT DO YOU HAVE IN MIND
+                    </p>
+                    <textarea className="textinput" id="i5vyy" placeholder="Please enter query..." defaultValue={""} />
+                  </div>
                 </div>
-                <div className="email">
-                  <i className="bi bi-envelope" />
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
-                </div>
-                <div className="phone">
-                  <i className="bi bi-phone" />
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
-                </div>
+                <button className="submit-btn" style={{backgroundColor:"#11235A", color:"white"}}>
+                  Submit
+                </button>
               </div>
-            </div>
-            <div className="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay={200}>
-              <form action="forms/contact.php" method="post" role="form" className="php-email-form">
-                <div className="row">
-                  <div className="col-md-6 form-group">
-                    <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />
-                  </div>
-                  <div className="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
-                  </div>
-                </div>
-                <div className="form-group mt-3">
-                  <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
-                </div>
-                <div className="form-group mt-3">
-                  <textarea className="form-control" name="message" rows={5} placeholder="Message" required defaultValue={""} />
-                </div>
-                <div className="my-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message" />
-                  <div className="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div className="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
+              <div className="social-media-links">
+                <a href="#" id="ix94i-2">
+                  <img className="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png" />
+                </a>
+                <a href="#">
+                  <img className="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png" />
+                </a>
+                <a href="#">
+                  <img className="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png" />
+                </a>
+                <a href="#" id="izldf-2">
+                  <img className="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png" />
+                </a>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
       </div>
+
     </Layout>
   )
 }

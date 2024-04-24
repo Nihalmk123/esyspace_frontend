@@ -36,7 +36,7 @@ export default function Dasboard() {
             <div className="sidebar-brand-icon rotate-n-15">
               {/* <i className="fas fa-laugh-wink" /> */}
             </div>
-            <div className="sidebar-brand-text mx-3">Easyspace</div>
+            <div className="sidebar-brand-text mx-3">Esyspace</div>
           </a>
           {/* Divider */}
           <hr className="sidebar-divider my-0" />
@@ -84,11 +84,11 @@ export default function Dasboard() {
             </div>
           </li> */}
           {/* Divider */}
-          <hr className="sidebar-divider" />
+          {/* <hr className="sidebar-divider" /> */}
           {/* Heading */}
-          <div className="sidebar-heading">
+          {/* <div className="sidebar-heading">
             Billings
-          </div>
+          </div> */}
           {/* Nav Item - Pages Collapse Menu */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -199,7 +199,7 @@ export default function Dasboard() {
                 <i className="fa fa-bars" />
               </button>
               {/* Topbar Search */}
-              <h3 style={{ color: '#6DB9EF' }}>Easyspace</h3>
+              <h3 style={{ color: '#6DB9EF' }}>Esyspace</h3>
               {/* <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div className="input-group">
                   <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
@@ -213,12 +213,12 @@ export default function Dasboard() {
               {/* Topbar Navbar */}
               <ul className="navbar-nav ml-auto">
                 {/* Nav Item - Search Dropdown (Visible Only XS) */}
-                <li className="nav-item dropdown no-arrow d-sm-none">
+                {/* <li className="nav-item dropdown no-arrow d-sm-none">
                   <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i className="fas fa-search fa-fw" />
-                  </a>
+                  </a> */}
                   {/* Dropdown - Messages */}
-                  <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                  {/* <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                     <form className="form-inline mr-auto w-100 navbar-search">
                       <div className="input-group">
                         <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
@@ -230,16 +230,15 @@ export default function Dasboard() {
                       </div>
                     </form>
                   </div>
-                </li>
+                </li> */}
                 {/* Nav Item - Alerts */}
-                <li className="nav-item dropdown no-arrow mx-1">
+                {/* <li className="nav-item dropdown no-arrow mx-1">
                   <a className="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i className="fas fa-bell fa-fw" />
-                    {/* Counter - Alerts */}
                     <span className="badge badge-danger badge-counter">3+</span>
-                  </a>
+                  </a> */}
                   {/* Dropdown - Alerts */}
-                  <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                  {/* <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                     <h6 className="dropdown-header">
                       Alerts Center
                     </h6>
@@ -278,7 +277,7 @@ export default function Dasboard() {
                     </a>
                     <a className="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                   </div>
-                </li>
+                </li> */}
                 {/* Nav Item - Messages */}
                 <li className="nav-item dropdown no-arrow mx-1">
                   <a className="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -287,7 +286,7 @@ export default function Dasboard() {
                     <span className="badge badge-danger badge-counter">7</span>
                   </a>
                   {/* Dropdown - Messages */}
-                  <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                  {/* <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                     <h6 className="dropdown-header">
                       Message Center
                     </h6>
@@ -336,17 +335,17 @@ export default function Dasboard() {
                       </div>
                     </a>
                     <a className="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                  </div>
+                  </div> */}
                 </li>
                 <div className="topbar-divider d-none d-sm-block" />
                 {/* Nav Item - User Information */}
-                <li className="nav-item dropdown no-arrow">
-                  <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li className="nav-item dropdown no-arrow show">
+                  <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <span className="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                     <img className="img-profile rounded-circle" src="img/undraw_profile.svg" />
                   </a>
                   {/* Dropdown - User Information */}
-                  <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  {/* <div className=" dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                     <a className="dropdown-item" href="#">
                       <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400" />
                       Profile
@@ -364,7 +363,7 @@ export default function Dasboard() {
                       <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" />
                       Logout
                     </a>
-                  </div>
+                  </div> */}
                 </li>
               </ul>
             </nav>

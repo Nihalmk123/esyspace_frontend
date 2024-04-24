@@ -37,7 +37,7 @@ export default function Header() {
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link to="/" style={{ textDecoration: 'none', color: '#11235A' }}>
-                Easyspace
+                Esyspace
               </Link>
             </Typography>
             {/* Navigation Links */}
@@ -64,14 +64,15 @@ export default function Header() {
               </Button>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 2 }}>
-              <Button color="primary" variant="outlined" sx={{ bgcolor: '' }}>
-                <Link to="/signup" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
+                <Link to="/signup" style={{ textDecoration: 'none', color: '#fff' }}>
                   Signup
                 </Link>
               </Button>
+
               <Box sx={{ ml: 1 }}>
-                <Button color="secondary" variant="outlined" sx={{ bgcolor: '#' }}>
-                  <Link to="/signin" style={{ textDecoration: 'none' }}>
+              <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
+                  <Link to="/signin" style={{ textDecoration: 'none', color: '#fff'}}>
                     Signin
                   </Link>
                 </Button>
