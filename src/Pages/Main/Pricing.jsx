@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from "../components/Layouts/Layout"
-import '../Styles/PricingStyle.css'
+import Layout from "../../components/Layouts/Layout"
+import '../../Styles/PricingStyle.css'
 export default function Pricing() {
   return (
     <Layout>

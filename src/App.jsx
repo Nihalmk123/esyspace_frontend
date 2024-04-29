@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Contact from "./Pages/Contact";
-import Features from "./Pages/Features";
-import Home from "./Pages/Home";
-import Pricing from "./Pages/Pricing";
-import Signin from "./Pages/Registration/Signin";
-import Signup from "./Pages/Registration/Signup";
-import Dasboard from "./Pages/Dasboard";
-import ForgotPassword from "./Pages/ForgotPassword";
-import Blog from "./Pages/Blog/Blog";
+import Contact from "../src/Pages/Main/Contact";
+import Features from "../src/Pages/Main/Features";
+import Home from "../src/Pages/Main/Home";
+import Pricing from "../src/Pages/Main/Pricing";
+import Signin from "./Pages/Accounts/Signin";
+import Signup from "./Pages/Accounts/Signup";
+import Dasboard from "../src/Pages/Dashboard/Dasboard";
+import ForgotPassword from "./Pages/Accounts/ForgotPassword";
+import Blog from "./Pages/Main/Blog";
 
 function App() {
   return (

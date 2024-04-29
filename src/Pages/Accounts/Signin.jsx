@@ -24,12 +24,18 @@ const Sigin = () => {
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/login/",
-        formData
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Token ${localStorage.getItem("token")}`,
+          },
+        }
       );
       if (response.status === 200) {
         //get the token from the backend response
         const token = response.data.token;
-        console.log(token)
+        console.log(token);
         //  to Store token in local storage
         localStorage.setItem("token", token);
         // Show success toast
@@ -40,7 +46,7 @@ const Sigin = () => {
           duration: 5000,
           isClosable: true,
         });
-        navigate("/dashboard");
+        navigate("/");
       } else {
         // Handle unsuccessful login
         console.error("Login failed");
@@ -56,6 +62,7 @@ const Sigin = () => {
       console.error("Error occurred while logging in:", error);
     }
   };
+
 
   return (
     <>

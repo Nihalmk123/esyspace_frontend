@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from "../components/Layouts/Layout"
-import '../Styles/ContactStyle.css'
+import Layout from "../../components/Layouts/Layout"
+import '../../Styles/ContactStyle.css'
 export default function Contact() {
   return (
     <Layout>

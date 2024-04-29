@@ -20,40 +20,29 @@ const Signup = () => {
         email,
         password,
       });
-      console.log(response.data.token)
+
       if (response.status === 200) {
-        // toast({
-        //   title: "Signup successful",
-        //   description: "You've successfully signed up.",
-        //   status: "success",
-        //   duration: 5000,
-        //   isClosable: true,
-        // });
-        alert("signup successfull")
-        localStorage.setItem("token", JSON.stringify(response.data.token))
-        navigate("/signin");
+        // Check if the response contains a token
+        if (response.data.token) {
+          // Store the token in localStorage
+          localStorage.setItem("token", response.data.token);
+          // Redirect to signin page
+          navigate("/signin");
+        } else {
+          // Handle the case where token is not received
+          alert("Token not received");
+        }
       } else {
-        // toast({
-        //   title: "Signup failed",
-        //   description: "Please try again later.",
-        //   status: "error",
-        //   duration: 5000,
-        //   isClosable: true,
-        // });
-        alert("signup failed")
+        // Handle unsuccessful signup
+        alert("Signup failed");
       }
     } catch (error) {
       console.error("Error:", error);
-      // toast({
-      //   title: "An error occurred",
-      //   description: "Please try again later.",
-      //   status: "error",
-      //   duration: 5000,
-      //   isClosable: true,
-      // });
-      alert("error occured in api")
+      // Handle API error
+      alert("Error occurred during signup");
     }
   };
+
 
   return (
     <div className="container">

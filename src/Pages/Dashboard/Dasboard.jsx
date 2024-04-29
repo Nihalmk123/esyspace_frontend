@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
-import BookConfRoom from "./BookConfRoom";
+import BookConfRoom from "../Dashboard/BookConfRoom/BookConfRoom";
 
 
 export default function Dasboard() {
@@ -87,26 +87,26 @@ export default function Dasboard() {
           {/* <hr className="sidebar-divider" /> */}
           {/* Heading */}
           {/* <div className="sidebar-heading">
-            Billings
+            Invoicing
           </div> */}
           {/* Nav Item - Pages Collapse Menu */}
           <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
               <i className="fas fa-fw fa-folder" />
-              <span>Invoice</span>
+              <span>Invoicing</span>
             </a>
-            {/* <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
               <div className="bg-white py-2 collapse-inner rounded">
-                <h6 className="collapse-header">Login Screens:</h6>
-                <a className="collapse-item" href="login.html">Login</a>
-                <a className="collapse-item" href="register.html">Register</a>
-                <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
-                <div className="collapse-divider" />
-                <h6 className="collapse-header">Other Pages:</h6>
-                <a className="collapse-item" href="404.html">404 Page</a>
-                <a className="collapse-item" href="blank.html">Blank Page</a>
+                {/* <h6 className="collapse-header">Login Screens:</h6> */}
+                {/* <a className="collapse-item" href="login.html">Login</a> */}
+                <a className="collapse-item" href="register.html">Invoice</a>
+                {/* <a className="collapse-item" href="forgot-password.html">Forgot Password</a> */}
+                {/* <div className="collapse-divider" /> */}
+                {/* <h6 className="collapse-header">Other Pages:</h6> */}
+                {/* <a className="collapse-item" href="404.html">404 Page</a> */}
+                {/* <a className="collapse-item" href="blank.html">Blank Page</a>s */}
               </div>
-            </div> */}
+            </div>
           </li>
           <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -217,8 +217,8 @@ export default function Dasboard() {
                   <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i className="fas fa-search fa-fw" />
                   </a> */}
-                  {/* Dropdown - Messages */}
-                  {/* <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                {/* Dropdown - Messages */}
+                {/* <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                     <form className="form-inline mr-auto w-100 navbar-search">
                       <div className="input-group">
                         <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
@@ -237,8 +237,8 @@ export default function Dasboard() {
                     <i className="fas fa-bell fa-fw" />
                     <span className="badge badge-danger badge-counter">3+</span>
                   </a> */}
-                  {/* Dropdown - Alerts */}
-                  {/* <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                {/* Dropdown - Alerts */}
+                {/* <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                     <h6 className="dropdown-header">
                       Alerts Center
                     </h6>
