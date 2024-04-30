@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import "../../Styles/Registration.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@chakra-ui/react";
 import axios from "axios";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const toast = useToast();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,16 +20,8 @@ const Signup = () => {
       });
 
       if (response.status === 200) {
-        // Check if the response contains a token
-        if (response.data.token) {
-          // Store the token in localStorage
-          localStorage.setItem("token", response.data.token);
-          // Redirect to signin page
-          navigate("/signin");
-        } else {
-          // Handle the case where token is not received
-          alert("Token not received");
-        }
+        // Redirect to signin page
+        navigate("/signin");
       } else {
         // Handle unsuccessful signup
         alert("Signup failed");
@@ -42,7 +32,6 @@ const Signup = () => {
       alert("Error occurred during signup");
     }
   };
-
 
   return (
     <div className="container">
@@ -66,6 +55,7 @@ const Signup = () => {
                           className="form-control form-control-user"
                           id="Username"
                           placeholder="Username*"
+                          required
                         />
                       </div>
                       <div className="form-group">
@@ -76,6 +66,7 @@ const Signup = () => {
                           className="form-control form-control-user"
                           id="mail"
                           placeholder="Email*"
+                          required
                         />
                       </div>
                       <div className="form-group">
@@ -86,6 +77,7 @@ const Signup = () => {
                           className="form-control form-control-user"
                           id="exampleInputPassword"
                           placeholder="Password*"
+                          required
                         />
                       </div>
                       <button

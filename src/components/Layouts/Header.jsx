@@ -11,12 +11,20 @@ import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import CloseIcon from '@mui/icons-material/Close';
+import { useAuth } from '../../context/auth';
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [auth, setAuth] = useAuth();
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
+  };
+
+  const handleLogout = () => {
+    // Perform logout actions, such as clearing local storage and updating authentication context
+    localStorage.removeItem("token");
+    setAuth({ user: null, token: "" });
   };
 
   return (
@@ -64,19 +72,33 @@ export default function Header() {
               </Button>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 2 }}>
-              <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
-                <Link to="/signup" style={{ textDecoration: 'none', color: '#fff' }}>
-                  Signup
-                </Link>
-              </Button>
-
-              <Box sx={{ ml: 1 }}>
-              <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
-                  <Link to="/signin" style={{ textDecoration: 'none', color: '#fff'}}>
-                    Signin
-                  </Link>
-                </Button>
-              </Box>
+              {auth.token ? (
+                <>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Typography variant="h6" component="div" sx={{ color: '#000', mr: 2 }}>
+                    {`Welcome,${auth.user}`}
+                  </Typography>
+                  <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }} onClick={handleLogout}>
+                    Logout
+                  </Button>
+                </Box>
+              </>              
+              ) : (
+                <>
+                  <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
+                    <Link to="/signup" style={{ textDecoration: 'none', color: '#fff' }}>
+                      Signup
+                    </Link>
+                  </Button>
+                  <Box sx={{ ml: 1 }}>
+                    <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
+                      <Link to="/signin" style={{ textDecoration: 'none', color: '#fff' }}>
+                        Signin
+                      </Link>
+                    </Button>
+                  </Box>
+                </>
+              )}
             </Box>
           </Toolbar>
         </AppBar>
@@ -120,7 +142,7 @@ export default function Header() {
             </Button>
           </ListItem>
           <ListItem>
-            <Button component={Link} to="/signin"  color="secondary" variant="outlined" sx={{ bgcolor: '#' }}>
+            <Button component={Link} to="/signin" color="secondary" variant="outlined" sx={{ bgcolor: '#' }}>
               Signin
             </Button>
           </ListItem>
