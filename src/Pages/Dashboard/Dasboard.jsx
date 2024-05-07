@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import BookConfRoom from "../Dashboard/BookConfRoom/BookConfRoom";
+import { useAuth } from "../../context/auth";
+import { Avatar, AvatarGroup, Box, Typography } from "@mui/material";
+import { Button } from "bootstrap";
+import ManageMeetingRooms from "./ManageMeetingRooms/ManageMeetingRooms";
 
 
 export default function Dasboard() {
 
   const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
+  const [auth, setAuth] = useAuth();
 
   const ChangeStyle = () => {
     if (style == "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion") {
@@ -62,7 +67,7 @@ export default function Dasboard() {
               <div className="bg-white py-2 collapse-inner rounded">
                 {/* <h6 className="collapse-header">Custom Components:</h6> */}
                 <Link className="collapse-item" to="/dashboard/BookRooms">Book Metting Room</Link>
-                <a className="collapse-item" href="cards.html">Manage Meeting Room</a>
+                <Link className="collapse-item" to="/dashboard/ManageMeetingRooms">Manage Meeting Room</Link>
                 <a className="collapse-item" href="cards.html">Booking Report</a>
               </div>
             </div>
@@ -341,8 +346,14 @@ export default function Dasboard() {
                 {/* Nav Item - User Information */}
                 <li className="nav-item dropdown no-arrow show">
                   <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                    <img className="img-profile rounded-circle" src="img/undraw_profile.svg" />
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Typography variant="h6" component="div" sx={{ color: '#000', display: 'flex', alignItems: 'center', marginRight: '1rem' }}>
+                      <AvatarGroup spacing={1}>
+                        <Avatar bg='teal.500' />
+                      </AvatarGroup>
+                      <span style={{marginLeft:"0.5rem"}} >{auth.user}</span>
+                    </Typography>
+                  </Box>
                   </a>
                   {/* Dropdown - User Information */}
                   {/* <div className=" dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -380,6 +391,7 @@ export default function Dasboard() {
                 {/* Earnings (Monthly) Card Example */}
                 <Routes>
                   <Route path="BookRooms" element={<BookConfRoom />} />
+                  <Route path="ManageMeetingRooms" element={<ManageMeetingRooms/>} />
                 </Routes>
                 {/* Earnings (Monthly) Card Example */}
                 {/* <div className="col-xl-3 col-md-6 mb-4">

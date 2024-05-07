@@ -18,13 +18,14 @@ const SignIn = () => {
         username: username,
         password: password,
       });
-
+  
       if (response.status === 200) {
-        const token = response.data.token;
-        // Store token to local storage
+        const { token, user_id } = response.data;
+        // Store token and user ID to local storage
         localStorage.setItem("token", token);
-        // Set user authentication
-        setAuth({ user: username, token: token });
+        localStorage.setItem("user_id", user_id);
+        // Set user authentication including the user ID
+        setAuth({ user: username, token: token, user_id: user_id });
         navigate('/dashboard');
       } else {
         console.error('Login failed');
@@ -41,6 +42,7 @@ const SignIn = () => {
       console.error('Error occurred while logging in:', error);
     }
   };
+  
 
   return (
     <div className="container mt-5">

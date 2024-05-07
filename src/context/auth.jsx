@@ -7,9 +7,11 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(() => {
     const token = localStorage.getItem("token");
     const user = localStorage.getItem("user");
+    const userId = localStorage.getItem("user_id"); // Add this line to get the user ID
     return {
       user: user ? JSON.parse(user) : null,
       token: token || "",
+      user_id: userId || null, // Set user ID
     };
   });
 
@@ -21,6 +23,7 @@ const AuthProvider = ({ children }) => {
     setAuth(newAuth);
     localStorage.setItem("token", newAuth.token);
     localStorage.setItem("user", JSON.stringify(newAuth.user));
+    localStorage.setItem("user_id", newAuth.user_id); // Update user ID in local storage
   };
 
   return (
@@ -29,6 +32,8 @@ const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+
 
 const useAuth = () => useContext(AuthContext);
 

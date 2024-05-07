@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const ForgotPassword = () => {
   return (
     <>
-      <div className="container">
+      <div className="container mt-5">
         {/* Outer Row */}
         <div className="row justify-content-center">
           <div className="col-xl-10 col-lg-12 col-md-9">

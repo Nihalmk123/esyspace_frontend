@@ -12,6 +12,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import CloseIcon from '@mui/icons-material/Close';
 import { useAuth } from '../../context/auth';
+import { Avatar, AvatarGroup } from '@mui/material';
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -74,15 +75,28 @@ export default function Header() {
             <Box sx={{ display: { xs: 'none', md: 'flex' }, ml: 2 }}>
               {auth.token ? (
                 <>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Typography variant="h6" component="div" sx={{ color: '#000', mr: 2 }}>
-                    {`Welcome,${auth.user}`}
-                  </Typography>
-                  <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }} onClick={handleLogout}>
-                    Logout
-                  </Button>
-                </Box>
-              </>              
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Typography variant="h6" component="div" sx={{ color: '#000', display: 'flex', alignItems: 'center', marginRight: '1rem' }}>
+                      <AvatarGroup spacing={1}>
+                        <Avatar bg='teal.500' />
+                      </AvatarGroup>
+                      <span style={{marginLeft:"0.5rem"}} >{auth.user}</span>
+                    </Typography>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      sx={{
+                        backgroundColor: '#11235A',
+                        color: '#FFFFFF',
+                      }}
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </Button>
+                  </Box>
+
+
+                </>
               ) : (
                 <>
                   <Button color="primary" variant="contained" style={{ backgroundColor: '#11235A', color: '#FFFFFF' }}>
