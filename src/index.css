@@ -151,3 +151,38 @@ footer .copy_right ul li:last-child::after {
   font-weight: 500;
   color: var(--white);
 }
+
+
+/* -------page not found------------------ */
+.pnf {
+  display: flex;
+  min-height:100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E8C872;
+}
+
+.pnf-title {
+  color: #A91D3A;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: #151515;
+  border: 1px solid #151515;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}

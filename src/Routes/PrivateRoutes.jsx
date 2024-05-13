@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-import Dasboard from "../Pages/Dashboard/Dasboard";
-import { useAuth } from "../context/auth";
+import Dasboard from "../Dashboard/Dasboard";
+import { useAuth } from "../../src/context/auth";
+import PageNotFound from "../../src/Main/PageNotFound";
 
 const PrivateRoute = () => {
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,7 @@ const PrivateRoute = () => {
     <Dasboard />
   ) : (
     <Navigate to="/signin" />
+    // <PageNotFound/>
   );
 };
 

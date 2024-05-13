@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useAuth } from "../../../context/auth";
+import { useAuth } from "../../src/context/auth";
 import { Popover } from 'react-bootstrap'; // Import Popover component from react-bootstrap
 
 import FullCalendar from "@fullcalendar/react";
@@ -8,7 +8,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 
-import "../../../Styles/BookConfRoomStyle.css";
+import "../../src/Styles/BookConfRoomStyle.css";
 
 function BookConfRoom() {
     const [auth] = useAuth();

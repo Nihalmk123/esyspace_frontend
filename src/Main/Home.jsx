@@ -1,15 +1,15 @@
 import React from 'react';
-import Layout from "../../components/Layouts/Layout";
+import Layout from "../../src/components/Layouts/Layout";
 import { Button } from '@mui/material';
-import hero_img from '../../assets/hero-img.png';
-import '../../Styles/Home.css';
-import ft1img1 from '../../assets/undraw_Redesign_feedback_re_jvm0.png';
-import ft1img2 from '../../assets/undraw_Remote_design_team_re_urdx.png';
-import ft1img3 from '../../assets/undraw_viral_tweet_gndb.png';
-import ft2img1 from '../../assets/undraw_Group_video_re_btu7.png';
-import ft2img2 from '../../assets/undraw_happy_music_g6wc.png';
-import ft2img3 from '../../assets/undraw_online_ad_re_ol62.png';
-import Profile from '../../assets/Profile-Avatar-PNG.png'
+import hero_img from '../../src/assets/hero-img.png';
+import '../../src/Styles/Home.css';
+import ft1img1 from '../../src/assets/undraw_Redesign_feedback_re_jvm0.png';
+import ft1img2 from '../../src/assets/undraw_Remote_design_team_re_urdx.png';
+import ft1img3 from '../../src/assets/undraw_viral_tweet_gndb.png';
+import ft2img1 from '../../src/assets/undraw_Group_video_re_btu7.png';
+import ft2img2 from '../../src/assets/undraw_happy_music_g6wc.png';
+import ft2img3 from '../../src/assets/undraw_online_ad_re_ol62.png';
+import Profile from '../../src/assets/Profile-Avatar-PNG.png'
 export default function Home() {
 
   return (

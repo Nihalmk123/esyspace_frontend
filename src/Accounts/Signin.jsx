@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useToast } from "@chakra-ui/react";
-import { useAuth } from "../../context/auth";
+import { useAuth } from "../../src/context/auth";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const toast = useToast();
   const [, setAuth] = useAuth();
 
   const handleSubmit = async (e) => {
@@ -26,24 +24,19 @@ const SignIn = () => {
         localStorage.setItem("user_id", user_id);
         // Set user authentication including the user ID
         setAuth({ user: username, token: token, user_id: user_id });
+        
+   alert("Login Successfull, Welcome ")
         navigate('/dashboard');
       } else {
         console.error('Login failed');
       }
     } catch (error) {
-      // Display error toast
-      toast({
-        title: 'Login failed',
-        description: 'Please enter correct details.',
-        status: 'error',
-        duration: 5000,
-        isClosable: true,
-      });
+      // Display error message
+      alert('Login failed. Please enter correct details.');
       console.error('Error occurred while logging in:', error);
     }
   };
   
-
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">

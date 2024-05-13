@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
-import BookConfRoom from "../Dashboard/BookConfRoom/BookConfRoom";
-import { useAuth } from "../../context/auth";
+import BookConfRoom from "../../src/BookConfRoom/BookConfRoom";
+import { useAuth } from "../context/auth";
 import { Avatar, AvatarGroup, Box, Typography } from "@mui/material";
 import { Button } from "bootstrap";
-import ManageMeetingRooms from "./ManageMeetingRooms/ManageMeetingRooms";
+import ManageMeetingRooms from "../ManageMeetingRooms/ManageMeetingRooms";
 
 
 export default function Dasboard() {
